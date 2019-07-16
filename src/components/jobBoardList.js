@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import AddJobs from './addJobs';
+import AddJob from './addJobs';
 
 class JobBoardList extends Component {
     state = {
@@ -8,8 +8,8 @@ class JobBoardList extends Component {
     };
 
     async componentDidMount() {
-        const jobs = await this.load();
-        console.log("jobs", jobs)
+        const jobs = await this.loadData();
+        console.log("jobs", jobs);
         this.setState({
             jobs
         });
@@ -22,5 +22,32 @@ class JobBoardList extends Component {
         return data;
     };
 
+    handleChange = async event => {
+        const changeValue = await this.setState({
+            jobs: event.target.value
+        });
+        console.log(changeValue);
+        return changeValue;
+    };
 
+    render() {
+        const { jobs } = this.state;
+
+        return(
+            <>
+                <h2>Jobs List</h2>
+                <ul>
+                    {jobs.map(job => {
+                        return ( 
+                            <li key={`job-${job.id}`}>
+                                <Link to={`/job/${job.id}`}>{job.posting_date}</Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </>
+        );
+    }
 }
+
+export default JobBoardList;
