@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 class AddJob extends Component {
     state = {
-        date : "",
+        posting_date : "",
         firstJob : "",
         commentsFirstJob : "",
         secondJob : "",
@@ -11,9 +11,9 @@ class AddJob extends Component {
         employee_id : null
     };
 
-    handleDateChange = e => {
+    handleposting_dateChange = e => {
         this.setState({
-            date: e.target.value
+            posting_date: e.target.value
         });
     };
 
@@ -49,13 +49,13 @@ class AddJob extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const date = this.state.date;
+        const posting_date = this.state.posting_date;
         const firstJob = this.state.firstJob;
         const commentsFirstJob = this.state.commentsFirstJob;
         const secondJob = this.state.secondJob;
         const commentsSecondJob = this.state.commentsSecondJob;
         const employee_id = this.state.employee_id;
-        const data = { date, firstJob, commentsFirstJob, secondJob, commentsSecondJob, employee_id };
+        const data = { posting_date, firstJob, commentsFirstJob, secondJob, commentsSecondJob, employee_id };
         const url = `http://localhost:3000/dailyjobboard/post/add`;
         const response = fetch(url, {
             method: "POST",
@@ -83,8 +83,8 @@ class AddJob extends Component {
                     <input
                         type="text"
                         onChange={this.handleDateChange}
-                        name="date"
-                        value={this.state.date}
+                        name="posting_date"
+                        value={this.state.posting_date}
                     />
                     <label> first Job: </label>
                     <input
