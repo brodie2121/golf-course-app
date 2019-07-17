@@ -11,6 +11,8 @@ import AddSpraychart from './components/addSprayChart';
 import SpraychartHome from './components/sprayChartHome';
 import Jobs from './components/jobs';
 import Employees from './components/employee';
+import SprayCharts from './components/spraychart'
+import EditEmployee from './components/editEmployee';
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
       <Route path="/dailyjobboard/post/add" exact component={AddJob} />
       <Route path="/jobs/:job_id?" component={Jobs} />
       <Route path="/employee/all" component={EmployeeHome} />
-      <Route path="/employee/:employee_id?" component={Employees} />
+      <Route path="/employees/:employee_id?" component={Employees} />
       <Route path="/employee/post/add" exact component={AddEmployee} />
+      <Route path="/employees/edit/:employee_id?" component={EditEmployee} />
       <Route path="/spraychart/post/add" exact component={AddSpraychart} />
       <Route path="/spraychart/all" exact component={SpraychartHome} />
+      <Route path="/spraycharts/:spraychart_id?" component={SprayCharts} />
 
     </Router>
   );

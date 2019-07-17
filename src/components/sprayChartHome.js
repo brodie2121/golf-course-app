@@ -41,7 +41,7 @@ class SpraychartHome extends Component {
                         console.log('spraychart', spraychart);
                         return ( 
                             <li key={`spraychart-${spraychart.id}`}>
-                                <Link to={`/spraychart/${spraychart.id}`}>{spraychart.dateapplied}</Link>
+                                <Link to={`/spraycharts/${spraychart.id}`}>{spraychart.dateapplied}</Link>
                             </li>
                         );
                     })}

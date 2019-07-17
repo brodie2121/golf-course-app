@@ -21,6 +21,14 @@ class JobBoardList extends Component {
         return data;
     };
 
+    handleChange = async event => {
+        const changeValue = await this.setState({
+          posts: event.target.value
+        });
+        console.log(changeValue);
+        return changeValue;
+      };
+      
     render() {
         const { jobs } = this.state;
 

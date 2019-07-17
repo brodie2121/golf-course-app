@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Link } from 'react-router-dom';
 class Employees extends Component {
     state = {
         employee: [] 
@@ -20,6 +20,13 @@ async componentDidMount() {
         return data;
     };
 
+    deleteData = async () => {
+        const employeeId = this.props.match.params.employee_id;
+        const url = `http://localhost:3000/employee/delete/${employeeId}`;
+        const response = await fetch(url);
+        return response;
+    };
+    
     render() {
         const { employee } = this.state;
         return (
@@ -32,6 +39,10 @@ async componentDidMount() {
                 <p>{employee.email}</p>
                 <p>{employee.experience}</p>
                 <p>{employee.datestarted}</p>
+                <Link onClick={this.deleteData} to={`/`}>
+                    Delete Employee
+                </Link>
+                <Link to={`/edit/${employee.id}`}>Edit Employee</Link>
             </div>
         );
     }
