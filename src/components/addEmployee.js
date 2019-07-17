@@ -97,7 +97,7 @@ class AddEmployee extends Component {
                         value={this.state.lastName}
                     />
                     <label> Phone Number: </label>
-                    <input
+                    <input onChange
                         type="text"
                         onChange={this.handlePhoneNumberChange}
                         name="phoneNumber"
