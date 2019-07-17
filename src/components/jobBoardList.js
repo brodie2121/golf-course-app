@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import AddJob from './addJobs';
 
 class JobBoardList extends Component {
     state = {

@@ -4,6 +4,7 @@ import './App.css';
 import AddJob from './components/addJobs';
 import JobBoardList from './components/jobBoardList';
 import NavBar from './NavBar/NavBar';
+import AddEmployee from './components/addEmployee';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/" component={NavBar} />
       <Route path="/dailyjobboard/all" exact component={JobBoardList} />
       <Route path="/dailyjobboard/post/add" exact component={AddJob} />
+      <Route path="/employee/post/add" exact component={AddEmployee} />
     </Router>
   );
 }

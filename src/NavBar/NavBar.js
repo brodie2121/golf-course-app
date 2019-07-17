@@ -9,7 +9,7 @@ function NavBar(props) {
             <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li><NavLink to="/dailyjobboard/post/add">Add New Jobs</NavLink></li>
                 <li><NavLink to="/dailyjobboard/all">Job Board List</NavLink></li>
-                <li><NavLink to="/signup">Sign up</NavLink></li>
+                <li><NavLink to="/employee/post/add">Employee</NavLink></li>
                 <li><NavLink to="/login">Log in</NavLink></li>
             </ul>
             </div>
