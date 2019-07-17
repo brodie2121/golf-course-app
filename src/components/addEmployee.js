@@ -80,7 +80,7 @@ class AddEmployee extends Component {
     render() {
         return(
             <>
-                <h1>Employee Page</h1>
+                <h4>Add New Employee</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label> First Name: </label>
                     <input

@@ -10,7 +10,7 @@ function NavBar(props) {
                 <li><NavLink to="/dailyjobboard/post/add">Add New Jobs</NavLink></li>
                 <li><NavLink to="/dailyjobboard/all">Job Board List</NavLink></li>
                 <li><NavLink to="/employee/all">Employee</NavLink></li>
-                <li><NavLink to="/dailyjobboard/jobs/${posting_date}">Log in</NavLink></li>
+                <li><NavLink to="/spraychart/all">Spray Chart</NavLink></li>
             </ul>
             </div>
         </nav>

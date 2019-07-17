@@ -21,14 +21,6 @@ class JobBoardList extends Component {
         return data;
     };
 
-    handleChange = async event => {
-        const changeValue = await this.setState({
-            jobs: event.target.value
-        });
-        console.log(changeValue);
-        return changeValue;
-    };
-
     render() {
         const { jobs } = this.state;
 
@@ -39,7 +31,7 @@ class JobBoardList extends Component {
                     {jobs.map(job => {
                         return ( 
                             <li key={`job-${job.id}`}>
-                                <Link to={`/job/${job.id}`}>{job.posting_date}</Link>
+                                <Link to={`/jobs/${job.id}`}>{job.posting_date} </Link>
                             </li>
                         );
                     })}

@@ -22,14 +22,6 @@ class EmployeeHome extends Component {
         return data;
     };
 
-    handleChange = async event => {
-        const changeValue = await this.setState({
-            employees: event.target.value
-        });
-        console.log(changeValue);
-        return changeValue;
-    };
-
     render() {
         const { employees } = this.state;
 
