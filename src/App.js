@@ -5,6 +5,8 @@ import AddJob from './components/addJobs';
 import JobBoardList from './components/jobBoardList';
 import NavBar from './NavBar/NavBar';
 import AddEmployee from './components/addEmployee';
+import EmployeeHome from './components/employeeHome';
+import JobBoardDate from './components/jobBoardDate';
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
       <Route path="/" component={NavBar} />
       <Route path="/dailyjobboard/all" exact component={JobBoardList} />
       <Route path="/dailyjobboard/post/add" exact component={AddJob} />
+      <Route path="/employee/all" component={EmployeeHome} />
       <Route path="/employee/post/add" exact component={AddEmployee} />
     </Router>
   );

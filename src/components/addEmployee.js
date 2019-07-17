@@ -22,7 +22,7 @@ class AddEmployee extends Component {
         });
     };
 
-    handlephoneNumberChange = e => {
+    handlePhoneNumberChange = e => {
         this.setState({
             phoneNumber: e.target.value
         });
@@ -30,7 +30,7 @@ class AddEmployee extends Component {
 
     handleEmailChange = e => {
         this.setState({
-            secondJob: e.target.value
+            email: e.target.value
         });
     };
 
@@ -97,7 +97,7 @@ class AddEmployee extends Component {
                         value={this.state.lastName}
                     />
                     <label> Phone Number: </label>
-                    <input onChange
+                    <input 
                         type="text"
                         onChange={this.handlePhoneNumberChange}
                         name="phoneNumber"
