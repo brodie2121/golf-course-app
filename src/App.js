@@ -24,7 +24,7 @@ function App() {
       <Route path="/employee/all" component={EmployeeHome} />
       <Route path="/employees/:employee_id?" component={Employees} />
       <Route path="/employee/post/add" exact component={AddEmployee} />
-      <Route path="/employees/edit/:employee_id?" component={EditEmployee} />
+      <Route path="employee/employees/update/:employee_id?" component={EditEmployee} />
       <Route path="/spraychart/post/add" exact component={AddSpraychart} />
       <Route path="/spraychart/all" exact component={SpraychartHome} />
       <Route path="/spraycharts/:spraychart_id?" component={SprayCharts} />

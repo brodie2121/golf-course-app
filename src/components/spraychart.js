@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class SprayCharts extends Component {
     state = {
@@ -20,6 +21,13 @@ async componentDidMount() {
         return data;
     };
 
+    deleteData = async () => {
+        const spraychartId = this.props.match.params.spraychart_id;
+        const url = `http://localhost:3000/spraychart/delete/${spraychartId}`;
+        const response = await fetch(url);
+        return response;
+    };
+
     render() {
         const { spraychart } = this.state;
         return (
@@ -34,6 +42,10 @@ async componentDidMount() {
                 <p>{spraychart.totalgallons}</p>
                 <p>{spraychart.sprayrig}</p>
                 <p>{spraychart.pestordiseasecontrolled}</p>
+                <Link onClick={this.deleteData} to={`/`}>
+                    Delete spraychart
+                </Link>
+                <Link to={`/edit/${spraychart.id}`}>Edit spraychart</Link>
             </div>
         );
     }

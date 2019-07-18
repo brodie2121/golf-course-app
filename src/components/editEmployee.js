@@ -80,7 +80,9 @@ class EditEmployee extends Component {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
+        
       },
+      
       body: JSON.stringify(data)
     })
       .then(response => {
@@ -90,9 +92,9 @@ class EditEmployee extends Component {
       })
       .catch(err => {
         console.log(err);
-      });
+    });
   };
-
+  
   render() {
     return (
       <>
