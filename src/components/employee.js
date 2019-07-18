@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Link } from 'react-router-dom';
+
 class Employees extends Component {
     state = {
         employee: [] 
@@ -42,7 +43,7 @@ async componentDidMount() {
                 <Link onClick={this.deleteData} to={`/`}>
                     Delete Employee
                 </Link>
-                <Link to={`/edit/${employee.id}`}>Edit Employee</Link>
+                <Link to={`/employees/update/${employee.id}`}>Update Employee</Link>
             </div>
         );
     }

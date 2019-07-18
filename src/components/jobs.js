@@ -41,7 +41,7 @@ async componentDidMount() {
                 <Link onClick={this.deleteData} to={`/`}>
                     Delete job
                 </Link>
-                <Link to={`/edit/${job.id}`}>Edit Job</Link>
+                <Link to={`/jobs/update/${job.id}`}>Edit Job</Link>
             </div>
         );
     }

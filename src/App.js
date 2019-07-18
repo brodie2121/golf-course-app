@@ -13,6 +13,7 @@ import Jobs from './components/jobs';
 import Employees from './components/employee';
 import SprayCharts from './components/spraychart'
 import EditEmployee from './components/editEmployee';
+import UpdateJob from './components/updateJob';
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
       <Route path="/dailyjobboard/all" exact component={JobBoardList} />
       <Route path="/dailyjobboard/post/add" exact component={AddJob} />
       <Route path="/jobs/:job_id?" component={Jobs} />
+      <Route path="/jobs/update/:dailyjobboard_id?" component={UpdateJob} />
       <Route path="/employee/all" component={EmployeeHome} />
       <Route path="/employees/:employee_id?" component={Employees} />
       <Route path="/employee/post/add" exact component={AddEmployee} />
-      <Route path="employee/employees/update/:employee_id?" component={EditEmployee} />
+      <Route path="/employees/update/:employee_id?" component={EditEmployee} />
       <Route path="/spraychart/post/add" exact component={AddSpraychart} />
       <Route path="/spraychart/all" exact component={SpraychartHome} />
       <Route path="/spraycharts/:spraychart_id?" component={SprayCharts} />

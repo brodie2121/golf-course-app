@@ -72,8 +72,13 @@ class EditEmployee extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const employeeId = this.props.match.params.employee_id;
-    const content = this.state.content;
-    const data = { content };
+    const firstName = this.state.firstName;
+    const lastName = this.state.lastName;
+    const phoneNumber = this.state.phoneNumber;
+    const email = this.state.email;
+    const experience = this.state.experience;
+    const dateStarted = this.state.dateStarted;
+    const data = { firstName, lastName, phoneNumber, email, experience, dateStarted };
     const url = `http://localhost:3000/employee/employees/update/${employeeId}`;
     const response = fetch(url, {
       method: "PUT",
