@@ -12,11 +12,6 @@ body {
   justify-content: center;
 }
 
-.par-wrap {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
 .home-photo {
   background-image: url("./images/golf.jpg");
   background-size: cover;

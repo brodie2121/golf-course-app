@@ -32,7 +32,7 @@ async componentDidMount() {
         const { employee } = this.state;
         return (
             <div>
-                <h4>Employee Info</h4>
+                <h4>Yard Boy Info</h4>
                 <p>{employee.id}</p>
                 <p>{employee.firstname}</p>
                 <p>{employee.lastname}</p>

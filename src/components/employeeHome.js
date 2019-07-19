@@ -27,7 +27,7 @@ class EmployeeHome extends Component {
 
         return(
             <>
-                <h2>Employee Name</h2>
+                <h2>Yard Boys</h2>
                 <ul>
                     {employees.map(employee => {
                         console.log('employee', employee);
