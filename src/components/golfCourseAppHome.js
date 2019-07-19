@@ -11,10 +11,8 @@ import AddJob from './addJobs';
                     <div className='home-photo'></div>
                     <h1 className='home-title'>Welcome to the Golf Course App!</h1>
                     <div className='par-wrap'>
-                        
                         <AddEmployee />
                         <AddJob />
-
                     </div>
                 </div>
             </>
