@@ -42,10 +42,10 @@ async componentDidMount() {
                 <p>{spraychart.totalgallons}</p>
                 <p>{spraychart.sprayrig}</p>
                 <p>{spraychart.pestordiseasecontrolled}</p>
-                <Link onClick={this.deleteData} to={`/`}>
+                <Link onClick={this.deleteData} to={`/spraychart/all`}>
                     Delete spraychart
                 </Link>
-                <Link to={`/edit/${spraychart.id}`}>Edit spraychart</Link>
+                <Link to={`/spraycharts/update/${spraychart.id}`}>Update Spraychart</Link>
             </div>
         );
     }

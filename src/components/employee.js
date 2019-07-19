@@ -40,7 +40,7 @@ async componentDidMount() {
                 <p>{employee.email}</p>
                 <p>{employee.experience}</p>
                 <p>{employee.datestarted}</p>
-                <Link onClick={this.deleteData} to={`/`}>
+                <Link onClick={this.deleteData} to={`/employee/all`}>
                     Delete Employee
                 </Link>
                 <Link to={`/employees/update/${employee.id}`}>Update Employee</Link>

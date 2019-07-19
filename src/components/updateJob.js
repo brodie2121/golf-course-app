@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import JobBoardDate from "./jobBoardDate";
 
 class UpdateJob extends Component {
   state = {
@@ -8,7 +7,7 @@ class UpdateJob extends Component {
     commentsFirstJob: "",
     secondJob: "",
     commentsSecondJob : "",
-    employee_id: null
+    employee_id: ""
   };
 
   async componentDidMount() {
@@ -16,10 +15,10 @@ class UpdateJob extends Component {
     console.log(job);
     this.setState({
         posting_date: job.posting_date,
-        firstJob: job.firstJob,
-        commentsFirstJob: job.commentsFirstJob,
-        secondJob: job.secondJob,
-        commentsSecondJob : job.commentsSecondJob,
+        firstJob: job.firstjob,
+        commentsFirstJob: job.commentsfirstjob,
+        secondJob: job.secondjob,
+        commentsSecondJob: job.commentssecondjob,
         employee_id: job.employee_id
     });
   }
@@ -102,50 +101,50 @@ class UpdateJob extends Component {
   render() {
     return (
       <>
-                <h2>{this.state.dailyjobboardId}</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <label> Date: </label>
-                    <input
-                        type="text"
-                        onChange={this.handleDateChange}
-                        name="posting_date"
-                        value={this.state.posting_date}
-                    />
-                    <label> first Job: </label>
-                    <input
-                        type="text"
-                        onChange={this.handleFirstJobChange}
-                        name="firstJob"
-                        value={this.state.firstJob}
-                    />
-                    <label> Comments First Job: </label>
-                    <input
-                        type="text"
-                        onChange={this.handleCommentsFirstJobChange}
-                        name="firstJob"
-                        value={this.state.commentsFirstJob}
-                    />
-                    <label> Second Job: </label>
-                    <input
-                        type="text"
-                        onChange={this.handleSecondJobChange}
-                        name="secondJob"
-                        value={this.state.secondJob}
-                    />
-                    <label> Comments Second Job: </label>
-                    <input
-                        type="text"
-                        onChange={this.handleCommentsSecondJobChange}
-                        name="commentsSecondJob"
-                        value={this.state.commentsSecondJob}
-                    />
-                    <label> Employee ID: </label>
-                    <input
-                        type="text"
-                        onChange={this.handleEmployeeChange}
-                        name="employee_id"
-                        value={this.state.employee_id}
-                    />
+        <h2>{this.state.dailyjobboardId}</h2>
+        <form onSubmit={this.handleSubmit}>
+            <label> Date: </label>
+            <input
+                type="text"
+                onChange={this.handleDateChange}
+                name="posting_date"
+                value={this.state.posting_date}
+            />
+            <label> first Job: </label>
+            <input
+                type="text"
+                onChange={this.handleFirstJobChange}
+                name="firstJob"
+                value={this.state.firstJob}
+            />
+            <label> Comments First Job: </label>
+            <input
+                type="text"
+                onChange={this.handleCommentsFirstJobChange}
+                name="firstJob"
+                value={this.state.commentsFirstJob}
+            />
+            <label> Second Job: </label>
+            <input
+                type="text"
+                onChange={this.handleSecondJobChange}
+                name="secondJob"
+                value={this.state.secondJob}
+            />
+            <label> Comments Second Job: </label>
+            <input
+                type="text"
+                onChange={this.handleCommentsSecondJobChange}
+                name="commentsSecondJob"
+                value={this.state.commentsSecondJob}
+            />
+            <label> Employee ID: </label>
+            <input
+                type="text"
+                onChange={this.handleEmployeeChange}
+                name="employee_id"
+                value={this.state.employee_id}
+            />
           <input type="submit" value="Submit" />
         </form>
       </>

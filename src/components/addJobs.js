@@ -1,4 +1,5 @@
 import React, { Component } from 'react'; 
+import '../App.css';
 
 class AddJob extends Component {
     state = {
@@ -80,7 +81,7 @@ class AddJob extends Component {
     render() {
         return(
             <>
-                <h1>NEW JOBS PAGE</h1>
+                <h4>New Jobs Page</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label> Date: </label>
                     <input

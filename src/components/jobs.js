@@ -38,7 +38,7 @@ async componentDidMount() {
                 <p>{job.secondjob}</p>
                 <p>{job.commentssecondjob}</p>
                 <p>{job.employee_id}</p>
-                <Link onClick={this.deleteData} to={`/`}>
+                <Link onClick={this.deleteData} to={`/dailyjobboard/all`}>
                     Delete job
                 </Link>
                 <Link to={`/jobs/update/${job.id}`}>Edit Job</Link>

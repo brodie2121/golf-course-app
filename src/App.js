@@ -14,11 +14,14 @@ import Employees from './components/employee';
 import SprayCharts from './components/spraychart'
 import EditEmployee from './components/editEmployee';
 import UpdateJob from './components/updateJob';
+import UpdateSpraychart from './components/updateSpraychart';
+import HomePage from './components/golfCourseAppHome';
 
 function App() {
   return (
     <Router>
       <Route path="/" component={NavBar} />
+      <Route path="/" exact component={HomePage} />
       <Route path="/dailyjobboard/all" exact component={JobBoardList} />
       <Route path="/dailyjobboard/post/add" exact component={AddJob} />
       <Route path="/jobs/:job_id?" component={Jobs} />
@@ -30,6 +33,7 @@ function App() {
       <Route path="/spraychart/post/add" exact component={AddSpraychart} />
       <Route path="/spraychart/all" exact component={SpraychartHome} />
       <Route path="/spraycharts/:spraychart_id?" component={SprayCharts} />
+      <Route path="/spraycharts/update/:spraychart_id?" component={UpdateSpraychart} />
 
     </Router>
   );
